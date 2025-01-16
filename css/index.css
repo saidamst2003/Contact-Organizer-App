@@ -88,3 +88,13 @@ search input {
     height: 100vh;
     background-color: #70707010;
 }
+.email-section h2 ,.phone-section h2 {
+    font-size: 12px;
+}
+.email-section h3  ,.phone-section h3{
+    font-size: 10px;
+}
+.email-section img  ,.phone-section img {
+   height: 20px;
+   width: 20px;
+}
