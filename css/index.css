@@ -1,0 +1,52 @@
+
+:root{
+    --main-color:#363B7B;
+    --second-color:black;
+    --oronge-color:#FA1010;
+    --sub-text-color:#707070;
+    --searchbar-back-color:#7070702b;
+
+}
+nav button{
+    padding: 5px 20px;
+    width: 100px;
+    min-width: 100px;
+}
+.btn-login{
+    background-color: var(--main-color);
+    color: white;
+    border: var(--main-color) solid 2px;
+
+}
+
+.btn-signup{
+    background-color: white;
+    color: black;
+    border: black 2 px solid;
+    
+}
+search input {
+    background-color: var(--searchbar-back-color);
+    color: #707070;
+    border: none;
+
+}
+.small-size{
+    height: 15px;
+    width: 15x;
+}
+#search-addon{
+    margin: 5px 5px;
+    color: var(--main-color);
+    
+
+}
+.input-group{
+    width: 90% !important;
+    
+
+}
+.form-control{
+    border: #363B7B solid 2px !important;
+
+}
