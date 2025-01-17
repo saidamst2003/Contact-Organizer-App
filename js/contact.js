@@ -1,17 +1,19 @@
 
+
+
+// get id 
 const cards = document.getElementById("item-card");
 const detail_section = document.getElementById("display-detail");
 const display_section = document.getElementById("display-section");
-
-
 // empty element in first side
 const empty = document.getElementById("item-empty");
 // empty element in second side
 const display_empty = document.getElementById("display-empty");
-
+// list element to display 
 const img = document.getElementById("card-profile");
 const username = document.getElementById("card-username");
 const phone = document.getElementById("card-phone");
+
 let contactlist = [];
 
 if (contactlist.length === 0) {
@@ -34,11 +36,14 @@ if (contactlist.length === 0) {
   cards.classList.add("d-flex");
   detail_section.classList.add("d-flex");
   display_section.classList.add("d-flex");
-
-
-  afficher();
+  afficher(contactlist);
 }
 
-function ajouter() {}
+function ajouter(list) {
+  
 
-function afficher() {}
+}
+
+function afficher(contact) {
+  
+}

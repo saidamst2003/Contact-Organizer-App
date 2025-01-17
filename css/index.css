@@ -42,10 +42,10 @@ search input {
 
 }
 .input-group{
-    width: 90% !important;
-    
+    width: 45% !important;
+    height: fit-content;
 
-}
+} 
 .form-control{
     border: #363B7B solid 2px !important;
 
