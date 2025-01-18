@@ -69,14 +69,14 @@ function afficher() {
 }
 function showContactDetail(index) {
   const contact = contactlist[index];
-
+  
   if (contact) {
     const info = document.getElementById("detail");
 
     info.innerHTML = ""; // Clear existing contacts
     console.log("Contact index "+index);
 
-    contactlist.forEach((contact, index) => {
+    const contact=contactlist[index];
       info.innerHTML = ""; 
       const contactHTML = `
        <div id="display-section" class="d-flex flex-row  justify-content-center m-4 text-center ">
@@ -139,7 +139,7 @@ function showContactDetail(index) {
                 </section>
       `;
       info.insertAdjacentHTML("beforeend", contactHTML);
-    });
+    
   } else {
     console.error("Contact not found."+index);
   }

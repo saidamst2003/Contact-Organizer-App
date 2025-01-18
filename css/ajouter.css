@@ -1,15 +1,15 @@
-.choice{
+/* .choice{
     border: rgb(219, 219, 216) 2px solid; background-color: white; border-radius: 10px; cursor: pointer;
-}
+} */
 
-.choice:hover {
+/* .choice:hover {
     border-color: #353A7B !important;
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
-}
+} */
 
 /* Effet quand sélectionné, la bordure apparaît autour du label */
-input[type="radio"]:checked + .gender-img {
+/* input[type="radio"]:checked + .gender-img {
     border: none;
 }
 
@@ -18,4 +18,4 @@ input[type="radio"]:checked:checked + .gender-img + p {
     border-radius: 10px;
     padding: 5px;
 }
-    
+     */

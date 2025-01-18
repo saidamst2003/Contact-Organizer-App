@@ -6,7 +6,7 @@ const ajouter_last = document.getElementById("ajouter-last");
 const ajouter_phone = document.getElementById("ajouter-phone");
 const ajouter_email = document.getElementById("ajouter-email");
 const ajouter_adress = document.getElementById("ajouter-adress");
-const ajouter_gender= document.querySelectorAll('input[name="gender"]');
+const ajouter_gender= document.getElementsByName("gender");
 const list_contact = document.getElementById("list-contact");
 
 // Initialize contact list from localStorage or as an empty array
@@ -14,12 +14,6 @@ const contactlist = JSON.parse(localStorage.getItem("contact")) || [];
 
 // Display contacts on page load
 afficher();
-ajouter.forEach(input => {
-  input.addEventListener('change', () => {
-      console.log(`Selected Gender: ${input.value}`);
-      
-  });
-});
 
 // Add event listener to the "Ajouter" button
 document.getElementById("btn-ajouter").addEventListener("click", function (e) {
@@ -35,7 +29,17 @@ function ajouter() {
   const phone = ajouter_phone.value.trim();
   const email = ajouter_email.value.trim();
   const adress = ajouter_adress.value.trim();
-  const gender =ajouter_gender.value;
+  var gender ;
+
+
+  for (let index = 0; index < ajouter_gender.length; index++) {
+        if(ajouter_gender[index].checked){
+          gender =ajouter_gender[index].value;
+        }    
+  }
+
+
+
 
   if (!isValidEmail(email)) {
     alert("Please enter a valid email address.");

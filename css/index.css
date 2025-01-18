@@ -110,3 +110,9 @@ width: 40% !important;
 height: 50% !important;    
 }
 
+.item-card:hover{
+background-color: var(--searchbar-back-color);
+padding: 10px;
+
+}
+
