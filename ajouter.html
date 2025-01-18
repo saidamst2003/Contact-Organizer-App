@@ -57,7 +57,7 @@
         <div class="row justify-content-between">
 
             <!-- left side start -->
-            <div class="left-side col-sm-12 col-md-5 m-2 p-20 ">
+            <div id="list-contact" class="left-side col-sm-12 col-md-5 m-2 p-20  ">
 
                 <!-- start of card itemes List (Contact list) -->
                 <div id="item-card" class=" d-flex flex-row m-4">
@@ -84,7 +84,7 @@
             </div>
 
             <!-- start right side  -->
-            <div class="right-side col-sm-12 col-lg-5 m-2 pe-0">
+            <div id="ajouter" class="ajouter right-side col-sm-12 col-lg-5 m-2 pe-0">
 
                 <!-- profile display pic -->
                 <div class="d-flex justify-content-center m-4 ">
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="container mt-5">
-                    <form class="row g-3">
+                    <form id="form" class="row g-3">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">First Name</label>
                             <input id="ajouter-name" type="text" class="form-control" id="inputName">
@@ -113,8 +113,8 @@
                         </div>
 
                         <div class="col-sm-12">
-                            <label for="inputState" class="form-label">city</label>
-                            <select id="inputState" class="form-select">
+                            <label for="ajouter-adress" class="form-label">city</label>
+                            <select id="ajouter-adress" class="form-select">
                                 <option selected>Choose...</option>
                                 <option>beni mellal</option>
                                 <option>Marrakech</option>
@@ -151,7 +151,7 @@
 
                         <div class="col-12 d-flex justify-content-around align-items-center">
                             <button type="submit" class="btn btn-outline-danger text-danger">Cancel</button>
-                            <button type="submit" class="btn btn-primary "
+                            <button id="btn-ajouter" type="button" class="btn btn-primary "
                                 style="background-color: #353A7B; border:#353A7B;">Save</button>
                         </div>
 
@@ -167,7 +167,7 @@
 
     </main>
     <footer></footer>
-    <script src="./js/contact.js"></script>
+    <script src="./js/ajouter.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 </body>
 

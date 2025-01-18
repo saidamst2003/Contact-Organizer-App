@@ -22,25 +22,19 @@ const display_email = document.getElementById("display-email");
 const display_gender = document.getElementById("display-gender");
 const display_adress = document.getElementById("display-adress");
 
-// ajouter element 
-const ajouter_img = document.getElementById("ajouter-profile");
-const ajouter_name = document.getElementById("ajouter-name");
-const ajouter_last = document.getElementById("ajouter-last");
-const ajouter_phone = document.getElementById("ajouter-phone");
-const ajouter_email = document.getElementById("ajouter-email");
-const ajouter_gender = document.getElementById("ajouter-gender");
-const ajouter_adress = document.getElementById("ajouter-adress");
 
 
-let contactlist = [];
 
-if (contactlist.length === 0) {
+const contactlist = [];
+  const list = JSON.parse(localStorage.getItem("contact"));
+  contactlist.push(list);
+
+
+if (contactlist.length === 0||list===null) {
   // hide content
   cards.classList.add("d-none");
   detail_section.classList.add("d-none");
   display_section.classList.add("d-none");
-
-
   // display empty dialog
   empty.classList.add("d-flex");
   display_empty.classList.add("d-flex");
@@ -49,22 +43,32 @@ if (contactlist.length === 0) {
   // hide content
   empty.classList.add("d-none");
   display_empty.classList.add("d-none");
-
   // display empty dialog
   cards.classList.add("d-flex");
   detail_section.classList.add("d-flex");
   display_section.classList.add("d-flex");
-  afficher(contactlist);
+  afficher();
 }
 
-function ajouter(list) {
+
+function afficher() {
 
 
-}
-
-function afficher(contact) {
-  contact.forEach(function(item, index) {
-
-  });
-  
+    const list_contact = document.getElementById("list-contact");
+    list_contact.innerHTML = "";
+    for (let index = 0; index < contactlist.length; index++) {
+      
+      const contactHTML =
+        ' <div id="item-card" class=" d-flex flex-row m-4"><img id="card-profile" src="./images/profile.png" alt="Profile" class="me-3"><div>' +
+        '<h2 id="card-username">' +
+        contactlist[index].name +
+        contactlist[index].lastname +
+        '</h2> <h3 id="card-phone">' +
+        contactlist[index].phone +
+        "</h3> </div>  </div>";
+      list_contact.insertAdjacentHTML("beforeend", contactHTML);
+      console.log(contactlist.length);
+    }
+   
+ 
 }
